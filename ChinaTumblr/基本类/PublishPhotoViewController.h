@@ -1,0 +1,15 @@
+//
+//  PublishPhotoViewController.h
+//  ChinaTumblr
+//
+//  Created by 张宗琦 on 2017/8/8.
+//  Copyright © 2017年 张宗琦. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface PublishPhotoViewController : UIViewController
+
+@property (nonatomic, copy) SearchTieZiWithKeyWordModel *model;
+
+@end

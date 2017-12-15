@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 12px;
+}
+
+img{
+  max-width: 100%;
+}

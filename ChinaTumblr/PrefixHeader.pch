@@ -1,0 +1,85 @@
+//
+//  PrefixHeader.pch
+//  ChinaTumblr
+//
+//  Created by 张宗琦 on 2017/7/26.
+//  Copyright © 2017年 张宗琦. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+
+#define W self.view.frame.size.width
+#define H self.view.frame.size.height
+
+#define CellW self.frame.size.width
+#define CellH self.frame.size.height
+
+#define UserDefaults [NSUserDefaults standardUserDefaults]
+
+// 颜色
+#define FUIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#define iPhone4S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640,1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750,1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6SP ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#import "Masonry/Masonry.h" // Masory布局
+#import "UIView+SDAutoLayout.h" // SDLayout布局
+#import "MBHUDView.h" // 弹出效果
+#import "MJRefresh.h" // 刷新动画的类库
+#import "MBProgressHUD.h" // 加载动画
+#import "UIImage+animatedGIF.h" // gif格式图片动画
+#import "HttpRequest.h" // 数据请求
+
+#import "MakeJson.h" //将字典转换成字符串
+
+#import "NSString+AES.h" // 用于AES加密解密和生成Key
+#import "NSString+URL.h" // 用于url转码
+#import "GTMBase64.h" // 用于对数据进行base64处理
+#import "UrlcodeAndBase64.h" // 对数据进行urlcode编码和base64编码
+#import "RSAEncryptor.h" // 用于RSA加密解密相关操作
+
+#import "GetUserJiaMi.h"  // 获取用户相关的加密内容
+
+#import "UIImageView+WebCache.h" // 设置网路请求到的图片
+
+#import "TimeZhuanHuan.h" // 时间戳转换成距离时间
+
+#import "UIScrollView+PSRefresh.h" // 横向刷新
+
+#import "BaseViewController.h" // 提示框
+
+#import "TipIsYourSelf.h" // 提示是他自己
+
+#import "ShareAndOtherView.h" // 分享举报视图
+#import "zhPopupController.h" // 弹出视图
+
+
+// 分享的相关库
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+
+
+#import "PublishTextViewController.h" // 发文字
+#import "PublishPhotoViewController.h" // 发图片
+#import "PublishVideoViewController.h" // 发视频
+
+
+#endif
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#endif /* PrefixHeader_pch */
